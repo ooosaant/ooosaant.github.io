@@ -7,14 +7,14 @@
       name="description"
       content="Portfolio profesional con habilidades, proyectos y formas de contacto."
     >
-    <title>Tu Nombre | Portfolio profesional</title>
+    <title>Óscar Santamaría | Portfolio profesional</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header" data-header>
       <a class="brand" href="#inicio" aria-label="Ir al inicio">
-        <span class="brand-mark">TN</span>
-        <span>Tu Nombre</span>
+        <span class="brand-mark">OS</span>
+        <span>Óscar Santamaría</span>
       </a>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
@@ -26,7 +26,8 @@
 
       <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
         <a href="#sobre-mi">Sobre mí</a>
-        <a href="#habilidades">Habilidades</a>
+        <a href="#cualidades">Cualidades</a>
+        <a href="#tecnologias">Tecnologías</a>
         <a href="#proyectos">Proyectos</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -37,10 +38,9 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
           <p class="eyebrow">Portfolio profesional</p>
-          <h1 id="hero-title">Hola, soy Tu Nombre.</h1>
+          <h1 id="hero-title">Hola, soy Óscar Santamaría</h1>
           <p class="hero-lead">
-            Profesional orientado a crear soluciones claras, útiles y bien ejecutadas.
-            Aquí puedes conocer mi perfil, mis habilidades y una selección de proyectos.
+            Persona recién graduado en Ingeniería Informática por la Universidad Europea del Atlántico. Aquí puedes conocer mi perfil, mis cualidades, las tecnologías que uso y una selección de proyectos.
           </p>
           <div class="hero-actions" aria-label="Acciones principales">
             <a class="button primary" href="#proyectos">
@@ -65,6 +65,14 @@
           <h2 id="about-title">Quién soy</h2>
         </div>
         <div class="about-grid">
+          <figure class="profile-photo">
+            <img src="assets/mi-foto.jpg" alt="Foto profesional de Tu Nombre" data-profile-photo>
+            <figcaption data-photo-fallback>
+              <span>Tu foto</span>
+              <small>Guarda tu imagen como assets/mi-foto.jpg</small>
+            </figcaption>
+          </figure>
+
           <div class="about-copy">
             <p>
               Soy una persona profesional, curiosa y resolutiva, con interés en aprender,
@@ -72,32 +80,36 @@
               orden, cuidar los detalles y comunicar con claridad durante todo el proceso.
             </p>
             <p>
-              Este texto es un punto de partida. Puedes sustituirlo por tu experiencia real:
-              estudios, sector, herramientas, logros, tipo de trabajo que buscas o aquello
-              que te hace diferente.
+              Me apasiona la tecnología y la programación, especialmente en el ámbito del
+              desarrollo frontend, la inteligencia artificial y el análisis de datos. Estoy
+              siempre buscando nuevas oportunidades para crecer profesionalmente y contribuir
+              con mis habilidades a proyectos innovadores.
             </p>
+            <p>
+              Realizando prácticas en la empresa de <hrfef="https://www.altadis.com/">ALTADIS</hrfef> , concretamente en el departamento de Calidad, donde he podido aplicar mis conocimientos y satisfacer mi curiosidad en el análisis de datos y la mejora de procesos. Esta experiencia me ha permitido desarrollar habilidades prácticas y trabajar en un entorno profesional, fortaleciendo mi capacidad para enfrentar desafíos y aportar soluciones efectivas.
+            </p>
+            <dl class="facts">
+              <div>
+                <dt>Ubicación</dt>
+                <dd>Santander, España</dd>
+              </div>
+              <div>
+                <dt>Especialidad</dt>
+                <dd>Programación frontend, IA, Data analysis</dd>
+              </div>
+              <div>
+                <dt>Disponibilidad</dt>
+                <dd>Abierto a oportunidades</dd>
+              </div>
+            </dl>
           </div>
-          <dl class="facts">
-            <div>
-              <dt>Ubicación</dt>
-              <dd>Tu ciudad, País</dd>
-            </div>
-            <div>
-              <dt>Especialidad</dt>
-              <dd>Tu area profesional</dd>
-            </div>
-            <div>
-              <dt>Disponibilidad</dt>
-              <dd>Abierto a oportunidades</dd>
-            </div>
-          </dl>
         </div>
       </section>
 
-      <section class="section skills-section" id="habilidades" aria-labelledby="skills-title">
+      <section class="section skills-section" id="cualidades" aria-labelledby="qualities-title">
         <div class="section-heading">
-          <p class="eyebrow">Capacidades</p>
-          <h2 id="skills-title">Habilidades</h2>
+          <p class="eyebrow">Forma de trabajar</p>
+          <h2 id="qualities-title">Cualidades</h2>
         </div>
         <div class="skills-grid">
           <article class="skill-card">
@@ -117,6 +129,35 @@
             <p>Analisis, toma de decisiones, priorizacion y ejecucion con foco en resultados.</p>
           </article>
         </div>
+
+      </section>
+
+      <section class="section technologies-section" id="tecnologias" aria-labelledby="tech-title">
+        <div class="section-heading">
+          <p class="eyebrow">Stack</p>
+          <h2 id="tech-title">Tecnologías que uso</h2>
+        </div>
+        <div class="tech-layout">
+          <div class="tech-copy">
+            <p>
+              Estas son algunas de las herramientas y tecnologías con las que trabajo o estoy incorporando a mi perfil. 
+            </p>
+          </div>
+          <ul class="tech-list" aria-label="Lista de tecnologías">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Git</li>
+            <li>MySQL</li>
+            <li>GitHub</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>SQL</li>
+            <li>Excel</li>
+            <li>Power BI</li>
+          </ul>
+        </div>
       </section>
 
       <section class="section projects-section" id="proyectos" aria-labelledby="projects-title">
@@ -128,39 +169,80 @@
           <article class="project-card">
             <div class="project-meta">
               <span>Proyecto 01</span>
-              <span>2026</span>
+              <span>2024</span>
             </div>
-            <h3>Nombre del proyecto</h3>
+            <h3>El Cantábrico</h3>
             <p>
-              Describe aquí el problema, tu rol, las herramientas utilizadas y el resultado
-              conseguido. Una descripcion breve y concreta suele funcionar mejor.
+              Sistema de gestión del restaurante El Cantábrico en donde puedes explorar su menú y productos, realizar pedidos a domicilio, leer y dejar reseñas.
+              Usando tecnologías como HTML, CSS y JavaScript para el desarrollo del front-end y MySQL para la gestión de la base de datos.
             </p>
-            <a href="#contacto" aria-label="Consultar detalles del proyecto 01">Consultar detalles</a>
+            <a href="https://github.com/oscarsantasanchez/proyecto_bd" aria-label="Consultar detalles del proyecto 01">Consultar detalles</a>
           </article>
           <article class="project-card">
             <div class="project-meta">
               <span>Proyecto 02</span>
-              <span>2026</span>
+              <span>2025</span>
             </div>
-            <h3>Nombre del proyecto</h3>
+            <h3>Carga Docente de una Universidad</h3>
             <p>
-              Puedes incluir trabajos académicos, experiencias profesionales, voluntariado,
-              casos prácticos o cualquier muestra que represente bien tu perfil.
+             Se desarolló un prototipado de un sistema de gestión de carga docente para una universidad, permitiendo a los docentes y administradores gestionar horarios, asignaturas y recursos de manera eficiente.
+             Este proyecto no se llego a desarrollar pero se trata de hacer las sesiones de requisitado con nuestro cliente para poder llegar a desarrollar este proyecto que posteriormente no nos competó desarrollarlo.
             </p>
-            <a href="#contacto" aria-label="Consultar detalles del proyecto 02">Consultar detalles</a>
+            <a href="https://github.com/DavidGarciaCosta/24-25-IdSw1-SDR" aria-label="Consultar detalles del proyecto 02">Consultar detalles</a>
           </article>
           <article class="project-card">
             <div class="project-meta">
               <span>Proyecto 03</span>
               <span>2026</span>
             </div>
-            <h3>Nombre del proyecto</h3>
+            <h3>OCR Detector de Texto</h3>
             <p>
-              Si tienes enlaces a GitHub, Behance, LinkedIn, documentos o demos, puedes
-              sustituir este enlace por la dirección correspondiente.
+            Se creó un proyecto sobre inteligencia artificial que permite detectar texto en imágenes y documentos escaneados utilizando técnicas de reconomiento óptico de caracteres (OCR). El proyecto se desarrolló en Python y se implementaron algoritmos de procesamiento de imágenes para mejorar la precisión del reconocimiento de texto.
             </p>
-            <a href="#contacto" aria-label="Consultar detalles del proyecto 03">Consultar detalles</a>
+            <a href="https://colab.research.google.com/drive/1nE4ZM7FLO2CBUjql99mE_5oMsrRC16bv?usp=sharing" target="_blank" rel="noreferrer" aria-label="Consultar detalles del proyecto 03">Consultar detalles</a>
           </article>
+          <article class="project-card">
+            <div class="project-meta">
+              <span>Proyecto 04</span>
+              <span>2026</span>
+            </div>
+            <h3>Detector cartas de Poker</h3>
+            <p>
+            Se desarrolló un proyecto de inteligencia artificial que permite detectar cartas de poker en imágenes utilizando técnicas de visión por computadora y aprendizaje automático. El proyecto se implementó en Python y se entrenaron modelos de reconocimiento de imágenes para identificar las cartas de poker en tiempo real.
+            </p>
+            <a href="https://github.com/oscarsantasanchez/Inteligencia-Artificial/tree/main/Examen%20Parcial" target="_blank" rel="noreferrer" aria-label="Consultar detalles del proyecto 04">Consultar detalles</a>
+          </article>
+        </div>
+
+        <div class="future-projects" aria-labelledby="future-projects-title">
+          <div class="section-heading compact">
+            <p class="eyebrow">Próximamente</p>
+            <h2 id="future-projects-title">Proyectos en desarrollo</h2>
+          </div>
+          <div class="projects-grid future-grid">
+            <article class="project-card future-card">
+              <div class="project-meta">
+                <span>En desarrollo</span>
+                <span>Pronto</span>
+              </div>
+              <h3>Gestión de Equipos de Protección Individual</h3>
+              <p>
+                Proyecto de digitalización del proceso de la entrega de los equipos de protección individual.
+              </p>
+              <span class="status-pill">Pendiente de publicar</span>
+            </article>
+            <article class="project-card future-card">
+              <div class="project-meta">
+                <span>En desarrollo</span>
+                <span>Pronto</span>
+              </div>
+              <h3>Pegatinas NFC</h3>
+              <p>
+                Proyecto de desarrollo de utilidades cotidianas en casa en donde a través de las pegatinas NFC se puede interactuar con los dispositivos de la casa en donde se está en desarrollo los proyectos de la lista de la compra con una pegatina pegada a la nevera y otra en la que se garantiza que se tome la medicación diariamente.
+              </p>
+              <span class="status-pill">Pendiente de publicar</span>
+            </article>
+            </div>
         </div>
       </section>
 
@@ -177,9 +259,9 @@
               en redes profesionales.
             </p>
             <div class="contact-links">
-              <a href="mailto:tu.email@example.com">tu.email@example.com</a>
-              <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="mailto:trabajo.osant@gmail.com">trabajo.osant@gmail.com</a>
+              <a href="https://www.linkedin.com/in/oscar-santamaria-sanchez-7596b5337/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="https://github.com/ooosaant" target="_blank" rel="noreferrer">GitHub</a>
             </div>
           </div>
 
@@ -208,7 +290,7 @@
     </main>
 
     <footer class="site-footer">
-      <p>&copy; <span data-year></span> Tu Nombre. Todos los derechos reservados.</p>
+      <p>&copy; <span data-year></span> Oscar Santamaría Sánchez. Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>

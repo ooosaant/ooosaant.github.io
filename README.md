@@ -10,9 +10,10 @@ Abre el archivo `index.html` con tu navegador.
 
 1. Cambia `Tu Nombre` por tu nombre real en `index.html`.
 2. Cambia `tu.email@example.com` por tu correo en `index.html` y `script.js`.
-3. Sustituye los textos de las secciones `Quien soy`, `Habilidades` y `Proyectos destacados`.
+3. Sustituye los textos de las secciones `Quien soy`, `Cualidades`, `Tecnologias` y `Proyectos destacados`.
 4. Cambia los enlaces de LinkedIn y GitHub por tus perfiles reales.
-5. Si tienes una foto o imagen propia, puedes ponerla en `assets/` y actualizar la ruta en `styles.css`.
+5. Guarda tu foto dentro de `assets/` con el nombre `mi-foto.jpg`. La web la mostrara automaticamente.
+6. Cuando termines tus proyectos en desarrollo, edita las tarjetas de `Proyectos en desarrollo` en `index.html`.
 
 ## Dónde publicarla gratis
 

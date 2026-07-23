@@ -4,6 +4,7 @@ const nav = document.querySelector("#site-nav");
 const navLinks = [...document.querySelectorAll(".site-nav a")];
 const year = document.querySelector("[data-year]");
 const contactForm = document.querySelector("[data-contact-form]");
+const profilePhoto = document.querySelector("[data-profile-photo]");
 
 year.textContent = new Date().getFullYear();
 
@@ -43,6 +44,18 @@ const observer = new IntersectionObserver(
 );
 
 sections.forEach((section) => observer.observe(section));
+
+profilePhoto.addEventListener("load", () => {
+  profilePhoto.closest(".profile-photo").classList.add("has-image");
+});
+
+profilePhoto.addEventListener("error", () => {
+  profilePhoto.hidden = true;
+});
+
+if (profilePhoto.complete && profilePhoto.naturalWidth > 0) {
+  profilePhoto.closest(".profile-photo").classList.add("has-image");
+}
 
 contactForm.addEventListener("submit", (event) => {
   event.preventDefault();

@@ -267,9 +267,63 @@ h3 {
 .about-grid,
 .contact-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  grid-template-columns: minmax(260px, 0.45fr) minmax(0, 1fr);
   gap: 34px;
   align-items: start;
+}
+
+.contact-grid {
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+}
+
+.profile-photo {
+  position: relative;
+  min-height: 420px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(135deg, #e7ebe6, #ffffff);
+  box-shadow: var(--shadow);
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+}
+
+.profile-photo figcaption {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  gap: 8px;
+  padding: 26px;
+  text-align: center;
+}
+
+.profile-photo figcaption span {
+  display: grid;
+  place-items: center;
+  width: 138px;
+  height: 138px;
+  border: 2px solid var(--green);
+  border-radius: 50%;
+  color: var(--green);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.profile-photo figcaption small {
+  max-width: 220px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.profile-photo.has-image figcaption {
+  display: none;
 }
 
 .about-copy {
@@ -279,7 +333,7 @@ h3 {
 }
 
 .facts {
-  margin: 0;
+  margin: 28px 0 0;
   border-top: 1px solid var(--line);
 }
 
@@ -306,6 +360,10 @@ h3 {
   background: #ffffff;
 }
 
+.technologies-section {
+  background: #eef2ed;
+}
+
 .skills-grid,
 .projects-grid {
   display: grid;
@@ -329,8 +387,40 @@ h3 {
 
 .skill-card p,
 .project-card p,
-.contact-copy {
+.contact-copy,
+.tech-copy {
   color: var(--muted);
+}
+
+.tech-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.2fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.tech-copy {
+  max-width: 520px;
+  font-size: 1.05rem;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tech-list li {
+  border: 1px solid rgba(36, 86, 75, 0.24);
+  border-radius: 8px;
+  padding: 10px 14px;
+  background: #ffffff;
+  color: var(--green-strong);
+  font-weight: 800;
+  box-shadow: 0 10px 24px rgba(23, 32, 29, 0.06);
 }
 
 .projects-grid {
@@ -366,6 +456,36 @@ h3 {
 .project-card a:focus-visible {
   color: var(--coral);
   outline: none;
+}
+
+.future-projects {
+  margin-top: 64px;
+  padding-top: 42px;
+  border-top: 1px solid var(--line);
+}
+
+.section-heading.compact {
+  margin-bottom: 24px;
+}
+
+.future-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.future-card {
+  min-height: 260px;
+  background: linear-gradient(180deg, #ffffff, #f6f8f5);
+}
+
+.status-pill {
+  align-self: flex-start;
+  margin-top: auto;
+  border: 1px solid rgba(198, 91, 74, 0.35);
+  border-radius: 8px;
+  padding: 8px 10px;
+  color: var(--coral);
+  font-size: 0.82rem;
+  font-weight: 800;
 }
 
 .contact-copy {
@@ -440,8 +560,14 @@ h3 {
   }
 
   .about-grid,
+  .tech-layout,
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .profile-photo,
+  .profile-photo img {
+    min-height: 360px;
   }
 }
 
@@ -500,7 +626,8 @@ h3 {
   }
 
   .skills-grid,
-  .projects-grid {
+  .projects-grid,
+  .future-grid {
     grid-template-columns: 1fr;
   }
 
