@@ -66,5 +66,5 @@ contactForm.addEventListener("submit", (event) => {
   const subject = encodeURIComponent(`Contacto portfolio - ${name}`);
   const body = encodeURIComponent(`${message}\n\nNombre: ${name}\nEmail: ${email}`);
 
-  window.location.href = `mailto:tu.email@example.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:trabajo.osant@gmail.com?subject=${subject}&body=${body}`;
 });
