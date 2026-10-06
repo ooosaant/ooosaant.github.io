@@ -1,70 +1,45 @@
-const header = document.querySelector("[data-header]");
-const navToggle = document.querySelector(".nav-toggle");
-const nav = document.querySelector("#site-nav");
-const navLinks = [...document.querySelectorAll(".site-nav a")];
-const year = document.querySelector("[data-year]");
-const contactForm = document.querySelector("[data-contact-form]");
-const profilePhoto = document.querySelector("[data-profile-photo]");
+(function () {
+  const EMAIL = "trabajo.osant@gmail.com";
+  const $ = (s) => document.querySelector(s);
 
-year.textContent = new Date().getFullYear();
+  $("#anio").textContent = new Date().getFullYear();
 
-const updateHeader = () => {
-  header.classList.toggle("is-scrolled", window.scrollY > 20);
-};
-
-updateHeader();
-window.addEventListener("scroll", updateHeader, { passive: true });
-
-navToggle.addEventListener("click", () => {
-  const isOpen = header.classList.toggle("is-open");
-  navToggle.setAttribute("aria-expanded", String(isOpen));
-});
-
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    header.classList.remove("is-open");
-    navToggle.setAttribute("aria-expanded", "false");
-  });
-});
-
-const sections = navLinks
-  .map((link) => document.querySelector(link.getAttribute("href")))
-  .filter(Boolean);
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      navLinks.forEach((link) => {
-        link.classList.toggle("is-active", link.getAttribute("href") === `#${entry.target.id}`);
-      });
+  // Menú: marca la sección visible
+  const links = [...document.querySelectorAll(".side nav a")];
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        links.forEach((l) => l.classList.toggle("on", l.getAttribute("href") === "#" + e.target.id));
+      }
     });
-  },
-  { rootMargin: "-35% 0px -55% 0px", threshold: 0.01 }
-);
+  }, { rootMargin: "-40% 0px -55% 0px" });
+  links.forEach((l) => { const s = document.querySelector(l.getAttribute("href")); if (s) io.observe(s); });
 
-sections.forEach((section) => observer.observe(section));
+  // Contacto: construye el correo según el motivo elegido
+  const enlace = $("#mailto");
+  function actualizar() {
+    const motivo = document.querySelector('input[name="motivo"]:checked').value;
+    const nombre = $("#nombre").value.trim();
+    const detalle = $("#detalle").value.trim();
+    const asunto = motivo + " - contacto desde tu portfolio";
+    const cuerpo =
+      "Hola Óscar,\n\n" +
+      "Te escribo por: " + motivo.toLowerCase() + ".\n" +
+      (detalle ? "\n" + detalle + "\n" : "") +
+      "\nUn saludo,\n" + (nombre || "");
+    enlace.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent(asunto) + "&body=" + encodeURIComponent(cuerpo);
+  }
+  document.querySelectorAll(".reason input, #nombre, #detalle").forEach((el) => el.addEventListener("input", actualizar));
+  actualizar();
 
-profilePhoto.addEventListener("load", () => {
-  profilePhoto.closest(".profile-photo").classList.add("has-image");
-});
-
-profilePhoto.addEventListener("error", () => {
-  profilePhoto.hidden = true;
-});
-
-if (profilePhoto.complete && profilePhoto.naturalWidth > 0) {
-  profilePhoto.closest(".profile-photo").classList.add("has-image");
-}
-
-contactForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const formData = new FormData(contactForm);
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const message = formData.get("message");
-  const subject = encodeURIComponent(`Contacto portfolio - ${name}`);
-  const body = encodeURIComponent(`${message}\n\nNombre: ${name}\nEmail: ${email}`);
-
-  window.location.href = `mailto:trabajo.osant@gmail.com?subject=${subject}&body=${body}`;
-});
+  // Copiar email
+  const aviso = $("#aviso");
+  $("#copiar").addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      aviso.textContent = "Email copiado: " + EMAIL;
+    } catch (e) {
+      aviso.textContent = "Cópialo a mano: " + EMAIL;
+    }
+  });
+})();
