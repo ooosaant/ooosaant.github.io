@@ -1,295 +1,167 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta
-      name="description"
-      content="Portfolio profesional con habilidades, proyectos y formas de contacto."
-    >
-    <title>Óscar Santamaría | Portfolio profesional</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header class="site-header" data-header>
-      <a class="brand" href="#inicio" aria-label="Ir al inicio">
-        <span class="brand-mark">OS</span>
-        <span>Óscar Santamaría</span>
-      </a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Óscar Santamaría | Desarrollo de software</title>
+  <meta name="description" content="Portfolio de Óscar Santamaría, estudiante de Ingeniería Informática en Santander: desarrollo web, datos e inteligencia artificial.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
 
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="sr-only">Abrir menú</span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+    <aside class="side">
+      <a class="brand" href="#inicio">Óscar Santamaría</a>
+      <p class="role">Desarrollo de software, datos e IA. Santander.</p>
+      <nav aria-label="Secciones">
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#cualidades">Cualidades</a>
         <a href="#tecnologias">Tecnologías</a>
         <a href="#proyectos">Proyectos</a>
         <a href="#contacto">Contacto</a>
       </nav>
-    </header>
+      <a class="side-cta" href="#contacto"><span class="dot"></span>Abierto a su primera oferta</a>
+    </aside>
 
     <main>
-      <section class="hero" id="inicio" aria-labelledby="hero-title">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <p class="eyebrow">Portfolio profesional</p>
-          <h1 id="hero-title">Hola, soy Óscar Santamaría</h1>
-          <p class="hero-lead">
-            Persona recién graduado en Ingeniería Informática por la Universidad Europea del Atlántico. Aquí puedes conocer mi perfil, mis cualidades, las tecnologías que uso y una selección de proyectos.
-          </p>
-          <div class="hero-actions" aria-label="Acciones principales">
-            <a class="button primary" href="#proyectos">
-              <svg aria-hidden="true" viewBox="0 0 24 24">
-                <path d="M3 7.5A2.5 2.5 0 0 1 5.5 5h13A2.5 2.5 0 0 1 21 7.5v9A2.5 2.5 0 0 1 18.5 19h-13A2.5 2.5 0 0 1 3 16.5v-9Zm2.5-.5a.5.5 0 0 0-.5.5V9h14V7.5a.5.5 0 0 0-.5-.5h-13ZM5 11v5.5a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5V11H5Z"/>
-              </svg>
-              Ver proyectos
-            </a>
-            <a class="button secondary" href="#contacto">
-              <svg aria-hidden="true" viewBox="0 0 24 24">
-                <path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 3.2V17h16V8.2l-7.4 5.55a1 1 0 0 1-1.2 0L4 8.2ZM5.7 7l6.3 4.72L18.3 7H5.7Z"/>
-              </svg>
-              Contactar
-            </a>
-          </div>
-        </div>
+      <section id="inicio" class="hero">
+        <h1><span>Programo</span> <span>aplicaciones</span> <span>web</span> <span>y</span> <span>doy</span> <span>sentido</span> <span>a</span> <span>los</span> <span>datos.</span></h1>
+        <p class="lead">Estudiante de último año de Ingeniería Informática. Busco mi primera oportunidad profesional en tecnología, y llego con prácticas en Altadis y un sistema web completo como Trabajo de Fin de Grado.</p>
       </section>
 
-      <section class="section about-section" id="sobre-mi" aria-labelledby="about-title">
-        <div class="section-heading">
-          <p class="eyebrow">Perfil</p>
-          <h2 id="about-title">Quién soy</h2>
-        </div>
-        <div class="about-grid">
-          <figure class="profile-photo">
-            <img src="assets/mi-foto.jpg" alt="Foto profesional de Óscar Santamaría" data-profile-photo>
-              <span>Tu foto</span>
-            </figcaption>
+      <section id="sobre-mi" class="block">
+        <h2>Sobre mí</h2>
+        <div class="about">
+          <figure class="photo">
+            <img src="assets/mi-foto.jpg" alt="Retrato de Óscar Santamaría" onerror="this.parentElement.classList.add('no-img')">
           </figure>
-          <div class="about-copy">
-            <p>
-              Soy una persona profesional, curiosa y resolutiva, con interés en aprender,
-              colaborar y transformar ideas en resultados prácticos. Me gusta trabajar con
-              orden, cuidar los detalles y comunicar con claridad durante todo el proceso.
-            </p>
-            <p>
-              Me apasiona la tecnología y la programación, especialmente en el ámbito del
-              desarrollo frontend, la inteligencia artificial y el análisis de datos. Estoy
-              siempre buscando nuevas oportunidades para crecer profesionalmente y contribuir
-              con mis habilidades a proyectos innovadores.
-            </p>
-            <p>
-              Realizando prácticas en la empresa de <hrfef="https://www.altadis.com/">ALTADIS</hrfef> , concretamente en el departamento de Calidad, donde he podido aplicar mis conocimientos y satisfacer mi curiosidad en el análisis de datos y la mejora de procesos. Esta experiencia me ha permitido desarrollar habilidades prácticas y trabajar en un entorno profesional, fortaleciendo mi capacidad para enfrentar desafíos y aportar soluciones efectivas.
-            </p>
-            <dl class="facts">
-              <div>
-                <dt>Ubicación</dt>
-                <dd>Santander, España</dd>
-              </div>
-              <div>
-                <dt>Especialidad</dt>
-                <dd>Programación frontend, IA, Data analysis</dd>
-              </div>
-              <div>
-                <dt>Disponibilidad</dt>
-                <dd>Abierto a oportunidades</dd>
-              </div>
-            </dl>
+          <div class="prose">
+            <p>Soy de Santander y estudio Ingeniería Informática en la Universidad Europea del Atlántico (2022–2026). Lo que más me gusta es coger una idea difusa y convertirla en algo que alguien pueda usar: una web, un informe que se entiende de un vistazo o un modelo que reconoce lo que le enseñas.</p>
+            <p>En 2025 hice seis meses de prácticas en el departamento de Calidad de Altadis. Allí trabajé con Python, SQL y herramientas de Microsoft para analizar datos y preparar los informes diarios y mensuales con los que el equipo seguía su actividad. Aprendí que un buen dato solo vale si llega claro a quien tiene que decidir.</p>
+            <p>Además de estudiar he trabajado en logística (2024–2026). Esos turnos me enseñaron a cumplir plazos, a trabajar en equipo bajo presión y a valorar que los procesos funcionen. Ahora quiero aplicar todo eso en un equipo de desarrollo.</p>
           </div>
         </div>
+        <dl class="facts">
+          <div><dt>Formación</dt><dd>Grado en Ingeniería Informática, 2022–2026</dd></div>
+          <div><dt>Idiomas</dt><dd>Español nativo, inglés B2</dd></div>
+          <div><dt>Me interesa</dt><dd>Frontend, análisis de datos e inteligencia artificial</dd></div>
+          <div><dt>Ubicación</dt><dd>Santander, abierto a trabajo presencial, híbrido o remoto</dd></div>
+        </dl>
       </section>
 
-      <section class="section skills-section" id="cualidades" aria-labelledby="qualities-title">
-        <div class="section-heading">
-          <p class="eyebrow">Forma de trabajar</p>
-          <h2 id="qualities-title">Cualidades</h2>
-        </div>
-        <div class="skills-grid">
-          <article class="skill-card">
-            <h3>Gestion y organizacion</h3>
-            <p>Planificación, seguimiento de tareas, documentación y mejora de procesos.</p>
-          </article>
-          <article class="skill-card">
-            <h3>Comunicacion</h3>
-            <p>Presentaciones, trato con clientes, trabajo en equipo y síntesis de información.</p>
-          </article>
-          <article class="skill-card">
-            <h3>Herramientas digitales</h3>
-            <p>Ofimatica, analisis de datos, plataformas colaborativas y aprendizaje continuo.</p>
-          </article>
-          <article class="skill-card">
-            <h3>Resolucion de problemas</h3>
-            <p>Analisis, toma de decisiones, priorizacion y ejecucion con foco en resultados.</p>
-          </article>
-        </div>
-
-      </section>
-
-      <section class="section technologies-section" id="tecnologias" aria-labelledby="tech-title">
-        <div class="section-heading">
-          <p class="eyebrow">Stack</p>
-          <h2 id="tech-title">Tecnologías que uso</h2>
-        </div>
-        <div class="tech-layout">
-          <div class="tech-copy">
-            <p>
-              Estas son algunas de las herramientas y tecnologías con las que trabajo o estoy incorporando a mi perfil. 
-            </p>
-          </div>
-          <ul class="tech-list" aria-label="Lista de tecnologías">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>Git</li>
-            <li>MySQL</li>
-            <li>GitHub</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>SQL</li>
-            <li>Excel</li>
-            <li>Power BI</li>
-          </ul>
+      <section id="cualidades" class="block">
+        <h2>Cualidades</h2>
+        <p class="intro">Cada una con un ejemplo real. Pulsa para verlo.</p>
+        <div class="quals">
+          <details open>
+            <summary>Orden con los datos</summary>
+            <p>En Altadis consolidé datos de varias fuentes en informes diarios y mensuales. Documento lo que hago para que otra persona pueda continuar mi trabajo sin preguntarme.</p>
+          </details>
+          <details>
+            <summary>Constancia</summary>
+            <p>Compaginé la carrera con trabajo en almacén durante dos años. Sé organizar mi tiempo y mantener el ritmo cuando hay varias cosas a la vez.</p>
+          </details>
+          <details>
+            <summary>Comunicación clara</summary>
+            <p>Para el proyecto de carga docente hicimos sesiones de requisitos con un cliente real. Escucho, resumo lo acordado y confirmo antes de construir.</p>
+          </details>
+          <details>
+            <summary>Curiosidad aplicada</summary>
+            <p>No me quedo en la teoría: he montado un detector de texto con OCR, un reconocedor de cartas de póker y un proyecto doméstico con pegatinas NFC.</p>
+          </details>
         </div>
       </section>
 
-      <section class="section projects-section" id="proyectos" aria-labelledby="projects-title">
-        <div class="section-heading">
-          <p class="eyebrow">Trabajo</p>
-          <h2 id="projects-title">Proyectos destacados</h2>
-        </div>
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-meta">
-              <span>Proyecto 01</span>
-              <span>2024</span>
-            </div>
-            <h3>El Cantábrico</h3>
-            <p>
-              Sistema de gestión del restaurante El Cantábrico en donde puedes explorar su menú y productos, realizar pedidos a domicilio, leer y dejar reseñas.
-              Usando tecnologías como HTML, CSS y JavaScript para el desarrollo del front-end y MySQL para la gestión de la base de datos.
-            </p>
-            <a href="https://github.com/oscarsantasanchez/proyecto_bd" aria-label="Consultar detalles del proyecto 01">Consultar detalles</a>
-          </article>
-          <article class="project-card">
-            <div class="project-meta">
-              <span>Proyecto 02</span>
-              <span>2025</span>
-            </div>
-            <h3>Carga Docente de una Universidad</h3>
-            <p>
-             Se desarolló un prototipado de un sistema de gestión de carga docente para una universidad, permitiendo a los docentes y administradores gestionar horarios, asignaturas y recursos de manera eficiente.
-             Este proyecto no se llego a desarrollar pero se trata de hacer las sesiones de requisitado con nuestro cliente para poder llegar a desarrollar este proyecto que posteriormente no nos competó desarrollarlo.
-            </p>
-            <a href="https://github.com/DavidGarciaCosta/24-25-IdSw1-SDR" aria-label="Consultar detalles del proyecto 02">Consultar detalles</a>
-          </article>
-          <article class="project-card">
-            <div class="project-meta">
-              <span>Proyecto 03</span>
-              <span>2026</span>
-            </div>
-            <h3>OCR Detector de Texto</h3>
-            <p>
-            Se creó un proyecto sobre inteligencia artificial que permite detectar texto en imágenes y documentos escaneados utilizando técnicas de reconomiento óptico de caracteres (OCR). El proyecto se desarrolló en Python y se implementaron algoritmos de procesamiento de imágenes para mejorar la precisión del reconocimiento de texto.
-            </p>
-            <a href="https://colab.research.google.com/drive/1nE4ZM7FLO2CBUjql99mE_5oMsrRC16bv?usp=sharing" target="_blank" rel="noreferrer" aria-label="Consultar detalles del proyecto 03">Consultar detalles</a>
-          </article>
-          <article class="project-card">
-            <div class="project-meta">
-              <span>Proyecto 04</span>
-              <span>2026</span>
-            </div>
-            <h3>Detector cartas de Poker</h3>
-            <p>
-            Se desarrolló un proyecto de inteligencia artificial que permite detectar cartas de poker en imágenes utilizando técnicas de visión por computadora y aprendizaje automático. El proyecto se implementó en Python y se entrenaron modelos de reconocimiento de imágenes para identificar las cartas de poker en tiempo real.
-            </p>
-            <a href="https://github.com/oscarsantasanchez/Inteligencia-Artificial/tree/main/Examen%20Parcial" target="_blank" rel="noreferrer" aria-label="Consultar detalles del proyecto 04">Consultar detalles</a>
-          </article>
-        </div>
-
-        <div class="future-projects" aria-labelledby="future-projects-title">
-          <div class="section-heading compact">
-            <p class="eyebrow">Próximamente</p>
-            <h2 id="future-projects-title">Proyectos en desarrollo</h2>
-          </div>
-          <div class="projects-grid future-grid">
-            <article class="project-card future-card">
-              <div class="project-meta">
-                <span>En desarrollo</span>
-                <span>Pronto</span>
-              </div>
-              <h3>Gestión de Equipos de Protección Individual</h3>
-              <p>
-                Proyecto de digitalización del proceso de la entrega de los equipos de protección individual.
-              </p>
-              <span class="status-pill">Pendiente de publicar</span>
-            </article>
-            <article class="project-card future-card">
-              <div class="project-meta">
-                <span>En desarrollo</span>
-                <span>Pronto</span>
-              </div>
-              <h3>Pegatinas NFC</h3>
-              <p>
-                Proyecto de desarrollo de utilidades cotidianas en casa en donde a través de las pegatinas NFC se puede interactuar con los dispositivos de la casa en donde se está en desarrollo los proyectos de la lista de la compra con una pegatina pegada a la nevera y otra en la que se garantiza que se tome la medicación diariamente.
-              </p>
-              <span class="status-pill">Pendiente de publicar</span>
-            </article>
-            </div>
+      <section id="tecnologias" class="block">
+        <h2>Tecnologías</h2>
+        <div class="stack">
+          <div><h3>Web</h3><p>HTML, CSS, JavaScript, React, Node.js</p></div>
+          <div><h3>Datos</h3><p>Python, SQL, MySQL, Excel, Power BI</p></div>
+          <div><h3>Herramientas</h3><p>Git, GitHub</p></div>
         </div>
       </section>
 
-      <section class="section contact-section" id="contacto" aria-labelledby="contact-title">
-        <div class="section-heading">
-          <p class="eyebrow">Contacto</p>
-          <h2 id="contact-title">Hablemos</h2>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-copy">
-            <p>
-              Si quieres saber más sobre mi trabajo, proponer una colaboración o comentar
-              una oportunidad profesional, puedes escribirme por correo o conectar conmigo
-              en redes profesionales.
-            </p>
-            <div class="contact-links">
-              <a href="mailto:trabajo.osant@gmail.com">trabajo.osant@gmail.com</a>
-              <a href="https://www.linkedin.com/in/oscar-santamaria-sanchez-7596b5337/" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a href="https://github.com/ooosaant" target="_blank" rel="noreferrer">GitHub</a>
+      <section id="proyectos" class="block">
+        <h2>Proyectos</h2>
+        <ol class="projects">
+          <li>
+            <span class="year">2024</span>
+            <div>
+              <h3>El Cantábrico</h3>
+              <p>Sistema de gestión web para un restaurante: carta y productos, pedidos a domicilio y reseñas de clientes. Interfaz con HTML, CSS y JavaScript, y base de datos en MySQL.</p>
+              <a href="https://github.com/oscarsantasanchez/proyecto_bd" target="_blank" rel="noopener">Ver código en GitHub</a>
             </div>
-          </div>
+          </li>
+          <li>
+            <span class="year">2025</span>
+            <div>
+              <h3>Carga docente universitaria</h3>
+              <p>Prototipo de un sistema para gestionar horarios, asignaturas y recursos de profesores y administradores. Mi parte fue la fase de requisitos: sesiones con el cliente para definir qué debía hacer el sistema.</p>
+              <a href="https://github.com/DavidGarciaCosta/24-25-IdSw1-SDR" target="_blank" rel="noopener">Ver documentación</a>
+            </div>
+          </li>
+          <li>
+            <span class="year">2026</span>
+            <div>
+              <h3>OCR: detector de texto</h3>
+              <p>Programa en Python que lee texto en imágenes y documentos escaneados. Aplica procesamiento de imagen previo para mejorar la precisión del reconocimiento.</p>
+              <a href="https://colab.research.google.com/drive/1nE4ZM7FLO2CBUjql99mE_5oMsrRC16bv?usp=sharing" target="_blank" rel="noopener">Abrir el cuaderno en Colab</a>
+            </div>
+          </li>
+          <li>
+            <span class="year">2026</span>
+            <div>
+              <h3>Detector de cartas de póker</h3>
+              <p>Modelo de visión por computadora entrenado en Python para identificar cartas de póker en imágenes y en tiempo real.</p>
+              <a href="https://github.com/oscarsantasanchez/Inteligencia-Artificial/tree/main/Examen%20Parcial" target="_blank" rel="noopener">Ver código en GitHub</a>
+            </div>
+          </li>
+        </ol>
 
-          <form class="contact-form" data-contact-form>
-            <label>
-              Nombre
-              <input type="text" name="name" autocomplete="name" required>
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" autocomplete="email" required>
-            </label>
-            <label>
-              Mensaje
-              <textarea name="message" rows="5" required></textarea>
-            </label>
-            <button class="button primary" type="submit">
-              <svg aria-hidden="true" viewBox="0 0 24 24">
-                <path d="M2.5 5.5a1 1 0 0 1 1.3-.95l17 6.5a1 1 0 0 1 0 1.9l-17 6.5a1 1 0 0 1-1.27-1.26L4.7 13H11a1 1 0 1 0 0-2H4.7L2.53 6.76a1 1 0 0 1-.03-1.26Z"/>
-              </svg>
-              Enviar mensaje
-            </button>
-          </form>
-        </div>
+        <h3 class="sub">En marcha</h3>
+        <ul class="wip">
+          <li><strong>Equipos de Protección Individual.</strong> Digitalizar la entrega de EPIs y su registro.</li>
+          <li><strong>Pegatinas NFC.</strong> Utilidades para casa: una pegatina en la nevera para la lista de la compra y otra que confirma que se ha tomado la medicación.</li>
+        </ul>
       </section>
+
+      <section id="contacto" class="block contact">
+        <h2>Contacto</h2>
+        <p class="intro">Elige el motivo y se abrirá un correo ya redactado en tu aplicación. Solo tienes que enviarlo.</p>
+
+        <div class="reason" role="radiogroup" aria-label="Motivo del mensaje">
+          <label><input type="radio" name="motivo" value="Oferta de empleo" checked><span>Tengo una oferta</span></label>
+          <label><input type="radio" name="motivo" value="Prácticas o beca"><span>Prácticas o beca</span></label>
+          <label><input type="radio" name="motivo" value="Colaboración en un proyecto"><span>Proyecto en común</span></label>
+          <label><input type="radio" name="motivo" value="Consulta"><span>Solo una pregunta</span></label>
+        </div>
+
+        <label class="field">Tu nombre o empresa
+          <input id="nombre" type="text" autocomplete="name" placeholder="Ana, de Empresa S.L.">
+        </label>
+        <label class="field">Algo más (opcional)
+          <textarea id="detalle" rows="3" placeholder="Puesto, modalidad, plazos…"></textarea>
+        </label>
+
+        <div class="actions">
+          <a id="mailto" class="btn" href="mailto:trabajo.osant@gmail.com">Abrir correo redactado</a>
+          <button id="copiar" class="btn ghost" type="button">Copiar mi email</button>
+          <span id="aviso" role="status" aria-live="polite"></span>
+        </div>
+
+        <p class="alt">También en
+          <a href="https://www.linkedin.com/in/oscar-santamaria-sanchez-7596b5337/" target="_blank" rel="noopener">LinkedIn</a>,
+          <a href="https://github.com/ooosaant" target="_blank" rel="noopener">GitHub</a>
+          o por teléfono, 622 066 711.
+        </p>
+      </section>
+
+      <footer>© <span id="anio"></span> Óscar Santamaría Sánchez</footer>
     </main>
-
-    <footer class="site-footer">
-      <p>&copy; <span data-year></span> Oscar Santamaría Sánchez. Todos los derechos reservados.</p>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>
